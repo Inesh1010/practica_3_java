@@ -1,92 +1,101 @@
 package com.company;
-import java.util.Random;
-import java.lang.Math;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.ArrayList;
+
+class Shape {
+
+    public Shape() {}
+
+    @Override
+    public String toString() {
+        return "It's a shape";
+    }
+
+}
+
+class Ball {
+
+    public Ball() {}
+
+}
+class Book {
+
+    public Book() {}
+
+}
+class Dog {
+
+    private String name;
+    private int age;
+
+    public Dog() {}
+
+    public Dog(String name) {
+        this.name = name;
+    }
+
+    public Dog(int age) {
+        this.age = age;
+    }
+
+    public Dog(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public int getHumanAge() {
+        return this.age * 7;
+    }
+
+    @Override
+    public String toString() {
+        return "This a dog called " + this.name + " which is " + this.age + " years old (" + getHumanAge() + " in human years)";
+    }
+
+}
+class DogFarm {
+
+    private ArrayList<Dog> dogs = new ArrayList<Dog>();
+
+    public DogFarm() {}
+
+    public void addDog(Dog dog) {
+        this.dogs.add(dog);
+    }
+
+}
 
 public class Main {
 
     public static void main(String[] args) {
 
-        int array[] = {6, 8, 9, 3};
-        int result = 0;
-
-        //Сумма циклом for (пункт 3)
-        for(int i=0;i<array.length;i++)
-            result+=array[i];
-        System.out.println(result); */
-
-        //Сумма циклом while (пункт 3)
-
-        int i=0;
-        while(i!=4) {
-            result += array[i];
-            i++;
-        }
-        System.out.println(result);
+        Book book = new Book();
+        Ball ball = new Ball();
 
 
-        //Сумма циклом do while (пункт 3)
-        int i = 0;
-        do{
-            result+=array[i];
-            i++;
-        }while(i!=4);
-        System.out.println(result);
-
-        //Аргументы командной строки (пункт 4)
-
-        System.out.println("\nConsole arguments: ");
-        for (String arg : args) {
-            System.out.print(arg + " ");
-        }
-        System.out.print("\n");
+        DogFarm farm = new DogFarm();
+        Dog puppy = new Dog("snowball", 2);
 
 
-        //Вывод гармонического ряда (пункт 5)
-        for(int i=1;i<11;i++){
-            System.out.println(String.format("%.3f", (1.0/i) ));
-        }
+        System.out.println(puppy);
 
-
-
-
-        //Массив (пункт 6)
-        Random ran_gen = new Random();
-
-        int arr_size = ran_gen.nextInt(21) + 5;
-        int[] rand_arr = new int[arr_size];
-
-        for (int i = 0; i < arr_size; i++) {
-            rand_arr[i] = 1 + (int)(Math.random() * 100);
-        }
-
-        System.out.print("\nArray: ");
-
-        for (int element : rand_arr) {
-            System.out.print(element + " ");
-        }
-
-        Arrays.sort(rand_arr);
-
-        System.out.print("\nSorted array: ");
-
-        for (int element : rand_arr) {
-            System.out.print(element + " ");
-        }
-
-
-        //Факториал (пункт 7)
-        Scanner myobj = new Scanner(System.in);
-        int ch = myobj.nextInt();
-
-        int fact = 1;
-        for (int i = 1; i <= ch; i++) {
-            fact *= i;
-        }
-        System.out.println(fact);
-        myobj.close();
-
+        farm.addDog(puppy);
 
     }
+
 }
