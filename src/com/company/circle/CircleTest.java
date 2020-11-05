@@ -31,9 +31,5 @@ public class CircleTest {
         System.out.println("\nSummary:");
         System.out.println(circle);
     }
+
 }
-
-
-
-
-
