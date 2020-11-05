@@ -51,7 +51,7 @@ public class Main {
 
 
 
-        //Random (пункт 6)
+        //Массив (пункт 6)
         Random ran_gen = new Random();
 
         int arr_size = ran_gen.nextInt(21) + 5;
@@ -61,7 +61,7 @@ public class Main {
             rand_arr[i] = 1 + (int)(Math.random() * 100);
         }
 
-        System.out.print("\nINITIAL RANDOM ARRAY: ");
+        System.out.print("\nArray: ");
 
         for (int element : rand_arr) {
             System.out.print(element + " ");
@@ -69,7 +69,7 @@ public class Main {
 
         Arrays.sort(rand_arr);
 
-        System.out.print("\nSORTED RANDOM ARRAY: ");
+        System.out.print("\nSorted array: ");
 
         for (int element : rand_arr) {
             System.out.print(element + " ");
@@ -89,5 +89,4 @@ public class Main {
 
 
     }
-    //changechange
 }
