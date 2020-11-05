@@ -1,0 +1,39 @@
+package com.company.circle;
+import java.lang.Math;
+
+public class CircleTest {
+
+    public static void main(String[] args) {
+
+        //Высчитываем показатели окружности
+        double initialRadius = -5.0 + Math.random()*10.0;
+        Circle circle = new Circle(initialRadius);
+        System.out.println("\nCircumference: " + circle.getCircumference());
+        System.out.println("Square: " + circle.getSquare());
+        System.out.println("Radius: " + circle.getRad());
+        System.out.println("Diameter: " + circle.getDiam());
+        System.out.println("\nSummary:");
+        System.out.println(circle);
+
+        //Меняем радиус
+        System.out.println("\nSetting new radius");
+        double newRadius = 1.0 + Math.random()*10.0;
+        circle.setRad(newRadius);
+        System.out.println("\nNew radius: " + newRadius + "!");
+        System.out.println("\nSummary: ");
+        System.out.println(circle);
+
+        //Меняем диаметр
+        System.out.println("\nSetting new diameter");
+        double newDiameter = 2.0 + Math.random()*20.0;
+        circle.setDiam(newDiameter);
+        System.out.println("\nNew diameter: " + newDiameter);
+        System.out.println("\nSummary:");
+        System.out.println(circle);
+    }
+}
+
+
+
+
+
