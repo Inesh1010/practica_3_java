@@ -1,11 +1,8 @@
 package com.company.human;
 
 public class Hand {
-
     private String clothing;
     private String clock;
-
-
 
     public Hand() {}
 
@@ -13,8 +10,6 @@ public class Hand {
         this.clothing = clothing;
         this.clock = clock;
     }
-
-
 
     public void setClothing(String clothing) {
         this.clothing = clothing;
@@ -24,8 +19,6 @@ public class Hand {
         return this.clothing;
     }
 
-
-
     public void setClock(String clock) {
         this.clock = clock;
     }
@@ -33,8 +26,6 @@ public class Hand {
     public String getClock() {
         return this.clock;
     }
-
-
 
     @Override
     public String toString() {

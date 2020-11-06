@@ -1,12 +1,9 @@
 package com.company.human;
 
 public class Head {
-
     private String haircut;
     private String hair_color;
     private String eye_color;
-
-
 
     public Head() {}
 
@@ -19,8 +16,6 @@ public class Head {
         this.eye_color = eye_color;
     }
 
-
-
     public void setHaircut(String haircut) {
         this.haircut = haircut;
         if (this.haircut.toLowerCase().equals("bald"))
@@ -30,8 +25,6 @@ public class Head {
     public String getHaircut() {
         return this.haircut;
     }
-
-
 
     public void setHair_color(String hair_color) {
         if (!this.haircut.toLowerCase().equals("bald"))
@@ -56,7 +49,7 @@ public class Head {
 
     @Override
     public String toString() {
-        return "head with " + this.hair_color + " " + this.haircut + " haircut and " + this.eye_color + " eyes";
+        return "Head with " + this.hair_color + " " + this.haircut + " haircut and " + this.eye_color + " eyes";
     }
 
 }

@@ -5,16 +5,15 @@ public class HumanTest {
 
     public static void main(String[] args) {
 
-        Head head_setter = new Head("fro", "brown", "hazel");
-        Leg leg_setter = new Leg("jeans");
-        Hand hand_setter = new Hand("shirt", "brush");
+        Head head_setter = new Head("bob", "black", "blue");
+        Leg leg_setter = new Leg("skirt");
+        Hand hand_setter = new Hand("shirt", "rolex");
         Human all_setter = new Human(head_setter, leg_setter, hand_setter);
 
-        System.out.println("\nall_setter'S SUMMARY:\n" + all_setter);
+        System.out.println("\n" + all_setter);
 
 
-        // Building a new human from scratch
-        // Making empty objects for every human component
+
 
         Head Man_Head = new Head();
         Leg Man_Leg = new Leg();
@@ -22,34 +21,27 @@ public class HumanTest {
         Human Man = new Human();
 
 
-        // Constructing a head
-        Man_Head.setHaircut("bald");
+        // Тестируем класс Head
+        Man_Head.setHaircut("long");
         Man_Head.setHair_color("hair should not exist");
         Man_Head.setEye_color("blue");
-
-        System.out.println("\nOLD ANGRY GUY'S HEAD'S SUMMARY:");
-        System.out.println("HAIRCUT: " + Man_Head.getHaircut());
-        System.out.println("HAIR COLOR: " + Man_Head.getHair_color());
-        System.out.println("EYE COLOR: " + Man_Head.getEye_color());
-
-        Man_Head.setHaircut("short"); // changing haircut for test if it will display hair color
+        System.out.println("Haircut: " + Man_Head.getHaircut());
+        System.out.println("Hair color: " + Man_Head.getHair_color());
+        System.out.println("Eye color: " + Man_Head.getEye_color());
+        Man_Head.setHaircut("short");
         Man_Head.setHair_color("black");
 
 
-        // Constructing a leg
+        //Тестируем класс leg
         Man_Leg.setClothing("jeans");
-
-        System.out.println("\nOLD ANGRY GUY'S LEG'S SUMMARY:");
-        System.out.println("LEG CLOTHING: " + Man_Leg.getClothing());
+        System.out.println("Leg clothing: " + Man_Leg.getClothing());
 
 
-        // Constructing a hand
-        Man_Hand.setClothing("sweater");
-        Man_Hand.setClock("microphone");
-
-        System.out.println("\nOLD ANGRY GUY'S HAND'S SUMMARY:");
-        System.out.println("HAND CLOTHING: " + Man_Hand.getClothing());
-        System.out.println("HAND clock: " + Man_Hand.getClock());
+        //Тестируем класс hand
+        Man_Hand.setClothing("T-shirt");
+        Man_Hand.setClock("Casio");
+        System.out.println("Hand clothing: " + Man_Hand.getClothing());
+        System.out.println("Hand clock: " + Man_Hand.getClock());
 
 
         // Linking the components
@@ -59,7 +51,7 @@ public class HumanTest {
 
 
         // Summarize
-        System.out.println("\nGEORGE CARLIN'S SUMMARY:");
+        System.out.println("\nHuman:");
         System.out.println(Man);
     }
 }
